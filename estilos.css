@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+}
+
+:root {
+    --amarillo: #ffbe0b;
+    --naranja: #fb5607;
+    --rosado: #ff006e;
+    --violeta: #8338ec;
+    --celeste: #3a86ff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+p{
+    font-size: 14px;
+    text-align: center;
+    margin: 1em 3em;
+}
+
+section{
+    padding: 1em;
+}
+
+article{
+    margin-top: 1em;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+header a img{
+    transition: 0.3s;
+}
+
+header a:hover img{
+    transform: scale(1.3);
+}
+
+/* CLASES */
+
+.contenedor{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.aplicaciones{
+    margin-top: 1.5em;
+}
+
+.aplicaciones img{
+    display: block;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}
+
+/* HEADER DE LOS TRABAJOS */
+
+#est-header{
+    color: var(--violeta);
+    border-bottom: 1px solid var(--violeta);
+}
+
+#cat-header, #rev-header{
+    color: var(--celeste);
+    border-bottom: 1px solid var(--celeste);
+}
+
+#jar-header{
+    color: var(--naranja);
+    border-bottom: 1px solid var(--naranja);
+}
+
+#tipo-header{
+    color: var(--rosado);
+    border-bottom: 1px solid var(--rosado);
+}
+
+#walk-header{
+    color: var(--amarillo);
+    border-bottom: 1px solid var(--amarillo);
+}
+
+.header-trabajos{
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+}
+
+.header-trabajos img{
+    display: block;
+    width: 100%;
+    height: 100%; 
+}
+
+/* HEADER DEL INDEX */
+
+#principal{
+    padding: 1.5em;
+    box-shadow: 
+    0 0 0 5px var(--amarillo),
+    0 0 0 10px var(--naranja),
+    0 0 0 15px var(--rosado),
+    0 0 0 20px var(--violeta),
+    0 0 0 25px var(--celeste);
+}
+
+#logo img{
+    width: 100px;
+}
+
+#principal nav{
+    margin-top: 1em;
+}
+
+#principal nav a{
+    color: black;
+    padding: 0.5em 1em;
+    position: relative;
+}
+
+#principal nav a::before {
+    content: "";
+    width: 0%;
+    height: 0.08em;
+    background-color: black;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    bottom: 0.2em;
+    transition: 0.3s;
+}
+
+#principal nav a:hover::before {
+    width: 100%;
+}
+
+/* footer */
+
+footer{
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a img{
+    width: 40px;
+    margin: 1em;
+}
+
+footer img{
+    width: 80px;
+    margin: 1em;
+}
+
+/* section grid */
+
+#trabajos{
+    display: grid;
+    grid-template-rows: repeat(6, 300px);
+    gap: 10px;
+    width: 100%;
+    padding-top: 3em;
+}
+
+#trabajos article{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#trabajos article img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+}
+
+#trabajos article:hover img{
+    transform: scale(1.1, 1.1);
+}
+
+#trabajos article::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+}
+
+#trabajos article:hover::after {
+    background: rgba(0, 0, 0, 0.7); 
+}
+
+#trabajos article h2{
+    z-index: 1;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 110%;
+    color: white;
+    transition: 0.4s;
+}
+
+#trabajos article:hover h2{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 45%;
+}
+
+/* Walkito */
+
+#walk-header div{
+    color: var(--amarillo);
+    border-bottom: 1px solid var(--amarillo);
+}
+
+#walkito video, #walkito img, #estampado img{
+    object-fit: cover;
+}
+
+#walk-grid article, #walk-flex article{
+    margin-top: 1em;
+}
+
+.subtitulos{
+    position: relative;
+    overflow: hidden;
+}
+
+.subtitulos h2{
+    position: absolute;
+    top: -5em;
+    left: 0.3em;
+    display: block;
+    background-color: #ffbe0b99;
+    padding: 0.5em 0.8em;
+    color: white;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.subtitulos:hover h2{
+    top: 0.3em;
+    left: 0.3em;
+}
+
+#walk-grid{
+    display: grid;
+    grid-template-rows: repeat(3,400px);
+}
+
+/* Revista y catálogo */
+
+#revista article, #catalogo article{
+    margin-top: 1em;
+}
+
+#revista article h2, #catalogo article h2{
+    background-color: #3a85ff70;
+}
+
+/* Estampado */
+
+#est-grid article{
+    filter: grayscale(0.8);
+    transition: 0.3s;
+}
+
+#est-grid article:nth-of-type(1){
+    background-image: url(img/est-fondo.png);
+    background-repeat: repeat;
+}
+
+#est-grid article:nth-of-type(1) img{
+    object-fit: contain;
+    position: absolute;
+    bottom: -25em;
+    transition: 0.4s;
+    padding: 1em;
+}
+
+#est-grid article:nth-of-type(1):hover img{
+    bottom: 0em;
+}
+
+#est-grid article:hover{
+    filter: grayscale(0);
+}
+
+#est-grid h2{
+    background-color: #8338ec79;
+}
+
+#est-grid{
+    display: grid;
+    grid-template-rows: repeat(6,400px);
+}
+
+/* Tipografía */
+
+#martinez article h2{
+    background-color: #ff006f5f;
+}
+
+#mart-grid{
+    display: grid;
+    grid-template-rows: repeat(5,400px);
+    gap: 10px;
+}
+
+/* Jardin */
+
+#jar-grid{
+    display: grid;
+    grid-template-rows: repeat(1, 350px);
+    gap: 10px;
+}
+
+#jar-grid article h2{
+    background-color: #fb54078a;
+}
+
+/* Tablet */
+
+@media all and (min-width:768px){
+
+    header div.flex{
+        flex-direction: row;
+    }
+
+    #trabajos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 300px);
+    }
+
+    p{
+        font-size: 16px;
+        margin: 5em 9em;
+    }
+
+    article{
+        margin-top: 0em;
+    }
+
+    /* Walkito */
+
+    #walk-grid, #est-grid{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(3, 350px);
+        gap: 10px;
+        width: 100%;
+    }
+
+    #walk-grid article:nth-of-type(1), #est-grid article:nth-of-type(1){
+        grid-column: span 6;
+    }
+
+    #walk-grid article:nth-of-type(2), #walk-grid article:nth-of-type(3){
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    #walk-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #walk-flex article{
+        width: 32%;
+    }
+
+    /* Estampado */
+
+    #est-grid{
+        grid-template-rows: repeat(3,400px);
+    }
+
+    #est-grid article:nth-of-type(2),
+    #est-grid article:nth-of-type(3),
+    #est-grid article:nth-of-type(4) {
+        grid-column: span 2;   
+    }
+
+    #est-grid article:nth-of-type(5),
+    #est-grid article:nth-of-type(6) {
+        grid-column: span 3;
+    }
+
+    /* Martínez */
+
+    #mart-grid{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(6, 300px);
+        width: 100%;
+    }
+
+    #mart-grid article:nth-of-type(1){
+        grid-column: span 6;
+    }
+
+    #mart-grid article:nth-of-type(2),
+    #mart-grid article:nth-of-type(3) {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    #mart-grid article:nth-of-type(4),
+    #mart-grid article:nth-of-type(5) {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    #mart-grid article:nth-of-type(6){
+        grid-column: span 6;
+    }
+
+    /* Jardin */
+
+    #jar-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 600px);
+    }
+
+    #jar-grid article:nth-of-type(1){
+        grid-column: span 2;
+    }
+
+    #jar-grid article, #jar-grid article img{
+        object-fit: cover;
+    }
+
+}
+
+/* Compu */
+
+@media all and (min-width:1200px){
+
+    #trabajos{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 300px);
+    }
+
+    section{
+        padding: 0em;
+    }
+}
+
+  
